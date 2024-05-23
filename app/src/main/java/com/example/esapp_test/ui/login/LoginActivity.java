@@ -18,7 +18,7 @@ import com.example.esapp_test.R;
 import com.example.esapp_test.databinding.ActivityLoginBinding;
 import com.example.esapp_test.model.LoginResponse;
 import com.example.esapp_test.network.NetworkManager;
-import com.example.esapp_test.ui.MainActivity;
+import com.example.esapp_test.ui.main.MainActivity;
 import com.example.esapp_test.util.Status;
 
 public class LoginActivity extends AppCompatActivity {

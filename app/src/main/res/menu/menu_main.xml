@@ -2,17 +2,17 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
 
     <item
-        android:id="@+id/home"
+        android:id="@+id/homeFragment"
         android:icon="@drawable/home"
         android:title="Home" />
 
     <item
-        android:id="@+id/readQr"
+        android:id="@+id/readQrFragment"
         android:icon="@drawable/add"
         android:title="Read QR" />
 
     <item
-        android:id="@+id/transfer"
+        android:id="@+id/transferFragment"
         android:icon="@drawable/favorites"
         android:title="Transfer" />
 

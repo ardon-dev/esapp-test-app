@@ -11,7 +11,7 @@
         android:id="@+id/main"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:context=".ui.MainActivity">
+        tools:context=".ui.main.MainActivity">
 
         <com.google.android.material.appbar.AppBarLayout
             android:id="@+id/main_appBarLyt"
@@ -36,6 +36,7 @@
             app:layout_constraintBottom_toTopOf="@id/main_navView"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
+            app:navGraph="@navigation/nav_main"
             app:layout_constraintTop_toBottomOf="@id/main_appBarLyt" />
 
         <com.google.android.material.bottomnavigation.BottomNavigationView
