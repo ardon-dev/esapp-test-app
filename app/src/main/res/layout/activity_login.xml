@@ -5,22 +5,38 @@
 
     <data>
 
+        <variable
+            name="viewModel"
+            type="com.example.esapp_test.ui.login.LoginViewModel" />
+
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/main"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:context=".ui.LoginActivity">
+        tools:context=".ui.login.LoginActivity">
 
         <ImageView
             android:id="@+id/login_logoImg"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:srcCompat="@drawable/logo" />
+
+        <TextView
+            android:id="@+id/login_titleTxt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="SIGN IN"
+            android:textAppearance="@style/TextAppearance.Material3.HeadlineMedium"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/login_logoImg" />
 
         <!-- Form -->
 
@@ -29,9 +45,10 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_margin="16dp"
+            android:layout_marginTop="24dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/login_logoImg">
+            app:layout_constraintTop_toBottomOf="@id/login_titleTxt">
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -40,18 +57,60 @@
                 android:padding="16dp">
 
                 <EditText
+                    android:id="@+id/login_emailInputTxt"
                     android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
                     android:hint="Email"
-                    android:layout_height="wrap_content" />
+                    android:inputType="textEmailAddress"
+                    android:text=""
+                    android:textAllCaps="false" />
 
                 <EditText
+                    android:id="@+id/login_passwordInputTxt"
                     android:layout_width="match_parent"
-                    android:hint="Password"
-                    android:layout_height="wrap_content" />
+                    android:layout_height="wrap_content"
+                    android:hint="Password" />
 
             </LinearLayout>
 
         </com.google.android.material.card.MaterialCardView>
+
+        <LinearLayout
+            android:id="@+id/login_buttonContainerLyt"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:gravity="center"
+            android:orientation="horizontal"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent">
+
+            <com.google.android.material.button.MaterialButton
+                style="@style/Widget.Material3.Button.TextButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Sign up" />
+
+            <com.google.android.material.button.MaterialButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:onClick="login"
+                android:text="Sign In" />
+
+        </LinearLayout>
+
+        <com.google.android.material.progressindicator.CircularProgressIndicator
+            android:id="@+id/login_progressBar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:indeterminate="true"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 

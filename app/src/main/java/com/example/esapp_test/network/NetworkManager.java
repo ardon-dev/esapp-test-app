@@ -1,6 +1,7 @@
 package com.example.esapp_test.network;
 
 import retrofit2.Retrofit;
+import retrofit2.converter.gson.GsonConverterFactory;
 
 public class NetworkManager {
 
@@ -12,6 +13,7 @@ public class NetworkManager {
     public static void initRetrofit() {
         retrofit = new Retrofit.Builder()
                 .baseUrl(baseUrl)
+                .addConverterFactory(GsonConverterFactory.create())
                 .build();
 
         service = retrofit.create(ApiService.class);
